@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Asilbek Rahimov">
+    <meta name="keywords" content="to_do">
+    <meta name="description" content="To Do list app">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" href="./public/images/icons/list.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>To Do</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="container">
+                <div class="modul">
+                    <i class='bx bx-x back-icon'></i>
+                    <div class="wrapper">
+                        <h1>Edit task here!</h1>
+                        <form class="edit-task-form">
+                            <input type="text" class="edited-task" required name="new_edited_task">
+                            <button type="submit">Edit task</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="hero_inner">
+                    <!--  -->
+                    <h1 class="heading">Just do it.</h1>
+                        <form class="task-form">
+                            <input type="text" name="task_name" class="task-input" required placeholder="add-task-here">
+                            <button type="submit">Add task</button>
+                        </form>
+                    <div class="task-lists"><span class="heading-task-list">Your task(s) list</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./script/main.js" type="module"></script>
+</body>
+</html>

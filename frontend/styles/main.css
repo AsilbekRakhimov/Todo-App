@@ -1,0 +1,452 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style:none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+:root{
+    --first_body_color:#E7E8D8;
+    --li-bc-color:#E7E8D8;
+}
+
+body{
+    background-color: var(--first_body_color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1350px;
+    padding: 0 50px;
+}
+
+.hero_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 30px;
+}
+
+h1{
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform:uppercase;
+}
+
+form{
+    display: flex;
+    gap: 28px;
+}
+
+input{
+    font-size: 22px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    background-color: #E7E8D8;
+    border-bottom: 2px solid black;
+    width: 450px;
+}
+
+button{
+    font-weight: 600;
+    font-size: 24px;
+    padding: 5px 12px;
+    outline: none;
+    border: none;
+    background-color: green;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 2px rgb(83, 82, 82);
+}
+
+button:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.heading-task-list{
+    font-size: 30px;
+    letter-spacing: 4px;
+    align-self: center;
+}
+
+/* .tasks{
+    font-size: 24px;
+    border: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    gap: 30px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px 2px rgb(107, 106, 106);
+    size: 30;
+    align-items: center;
+    width: 600px;
+    background-color: var(--li-bc-color);
+} */
+
+.editors{
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(10, 10, 0);
+    padding: 7px;
+    border-radius: 4px;
+    background-color: rgb(188, 193, 188);
+    cursor: pointer
+}
+
+.editors:hover{
+    background: rgb(57, 56, 56);
+}
+
+.task-lists{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-data{
+    border: 3px solid black;
+    font-size: 24px;
+    padding: 6px 20px;
+    font-weight: 600;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+
+ }
+
+.edit-delete-wrapper{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.check-done{
+    border: 2px solid rgb(3, 3, 140);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    /* padding: 13px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-done-icon{
+    width: 25px;
+    height: 25px;
+    align-self: center;
+    display: none;
+}
+
+.check-done-icon-active{
+    display: block;
+}
+
+.btn-save{
+    display: none;
+    color: #555b09;
+}
+
+.btn-save-show{
+    background-color: #555b09;
+    display: block;
+    color: white;
+}
+
+.task-letters{
+    color: rgb(118, 113, 113);
+    text-decoration: line-through;
+}
+
+.modul{
+    display: none;
+    position: fixed; 
+    inset: 0;
+    z-index: 1; 
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100vh; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.7); 
+    border: 2px solid white; 
+}
+.back-icon{
+    color: red;
+    font-size: 70px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.wrapper{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: #39392b;
+    padding: 100px 0;
+    width: 800px;
+    border-radius: 18px;
+    align-self: center;
+    margin: 0 auto
+}
+
+.wrapper h1{
+    color: #f8f8f2;
+    font-weight: 900;
+}
+
+.modul input{
+    border: 5px solid rgb(84, 56, 3);
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.modul button{
+    background-color: blue;
+    font-weight: 700;
+}
+
+
+@media screen and (max-width:992px) {
+    .container{
+        width:  950px;
+    }
+    .back-icon{
+        font-size: 55px;
+        right: 16px;
+    }
+    .wrapper{
+        width: 650px;
+        padding: 60px 0;
+    }
+    .wrapper h1{
+        font-size: 50px;
+        font-weight: 800;
+    }
+}
+
+@media screen and (max-width:776px){
+    .container{
+        width: 750px;
+    }
+    .hero_inner{
+        gap: 20px;
+    }
+    h1{
+        font-size: 45px;
+        letter-spacing: 6px;
+    }
+    input{
+        font-size: 16pxpx;
+        padding: 8px;
+        width: 350px;
+    }
+    .editors{
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+    }
+    .task-lists{
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .task-data{
+        border: 2px solid black;
+        font-size: 18px;
+        padding: 6px 16px;
+    }
+    .back-icon{
+        font-size: 50px;
+        right: 18px;
+    }
+    .wrapper{
+        width: 550px;
+        padding: 60px 0;
+    }
+    .wrapper h1{
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .modul input{
+        border: 5px solid rgb(84, 56, 3);
+        border-radius: 12px;
+        font-size: 18px;
+    }
+    .modul button{
+        background-color: blue;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 4px 9px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .container{
+        width: 600px;
+    }
+    .hero_inner{
+        gap: 16px;
+    }
+    h1{
+        font-size: 40px;
+        letter-spacing: 5px;
+    }
+    input{
+        font-size: 14px;
+        padding: 6px;
+        width: 300px;
+    }
+    .editors{
+        width: 25px;
+        height: 25px;
+        padding: 3px;
+    }
+    .task-lists{
+        width: 430px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .task-data{
+        border: 2px solid black;
+        font-size: 18px;
+        padding: 6px 16px;
+    }
+    button{
+        font-weight: 600;
+        font-size: 14px;
+        padding: 5px 8px;
+        outline: none;
+        border: none;
+        background-color: green;
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px 2px rgb(83, 82, 82);
+    }
+}
+
+@media screen and (max-width:480px){
+    .container{
+        width: 420px;
+    }
+    .hero_inner{
+        gap: 12px;
+    }
+    h1{
+        font-size: 30px;
+        letter-spacing: 4px;
+    }
+    input{
+        font-size: 18px;
+        padding: 6px;
+        width: 270px;
+    }
+    .editors{
+        width: 30px;
+        height: 30px;
+        padding: 3px;
+    }
+    .task-lists{
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .task-data{
+        border: 2px solid black;
+        font-size: 20px;
+        padding: 6px 16px;
+    }
+}
+
+@media screen and (max-width:340px){
+    .container{
+        width: 350px;
+    }
+    .hero_inner{
+        gap: 12px;
+    }
+    h1{
+        font-size: 19px;
+        letter-spacing: 4px;
+    }
+    input{
+        font-size: 14px;
+        padding: 6px;
+        width: 220px;
+    }
+    .editors{
+        width: 25px;
+        height: 25px;
+        padding: 3px;
+    }
+    .task-lists{
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .task-data{
+        border: 2px solid black;
+        font-size: 14px;
+        padding: 4px 12px;
+    }
+    .back-icon{
+        font-size: 50px;
+        right: 8px;
+    }
+    .wrapper{
+        width: 550px;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper h1{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .modul input{
+        border: 5px solid rgb(84, 56, 3);
+        border-radius: 12px;
+        font-size: 20px;
+        padding: 2px 5px;
+        width: 250px;
+    }
+    .modul button{
+        background-color: blue;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 4px 6px;
+    }
+}
